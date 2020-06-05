@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>To-do list</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <header>
+      <div class="profile">
+        <img id="header-img" src="circle.png" alt="">
+        <h3></h3>
+      </div>
+      <h2>to-do</h1>
+      <img id="logout" src="logout-icon.png" alt="">
+    </header>
+    <div class="body">
+      <div class="create-folder">
+        <div class="create-folder-inside">
+          <img src="close.png" id="close-icon">
+          <label for="folder-name-input">Folder name</label>
+          <input id="folder-name-input"type="text">
+          <button id="create-folder-btn"type="button">Create</button>
+        </div>
+      </div>
+      <div class="create-list">
+        <div class="create-folder-inside">
+          <img src="close.png" id="close-icon-list">
+          <label for="list-name-input">To-do</label>
+          <input id="list-name-input"type="text">
+          <button id="create-list-btn"type="button">Create</button>
+        </div>
+      </div>
+      <div id="container">
+        <div class="folder-bar">
+          <div class="search">
+            <input id="search-input" type="text">
+            <button id="search-btn" type="button" name="button"><img id="search-icon"src="search-icon.png"></button>
+          </div>
+          <p id="create-folder-link">create folder</p>
+          <div class="folder-exists"></div>
+          <div class="add-folder">
+            <img id="add-circle" src="circle.png">
+            <img class="add-sticks" id="rotated-stick"src="stick.png" alt="">
+            <img class="add-sticks" src="stick.png" alt="">
+            <h3>Add folder</h3>
+            <p>Folders are where you can store many different to-do lists</p>
+          </div>
+        </div>
+        <div class="list">
+          <img src="add-list-item.png" id="add-list-item">
+          <div id="black-bar"></div>
+          <h1 id="folder-title"></h1>
+          <ul id="to-do-items-holder"></ul>
+        </div>
+      </div>
+    </div>
+    <div class="login">
+      <h1 id="greeting">Create Account</h1>
+      <form class="login-form">
+        <label for="name" class="login-label" id="name-label">Full name</label>
+        <input type="text" class="login-input" id="name-input">
+        <label for="name" class="login-label">Email</label>
+        <input type="text" class="login-input" id="email-input">
+        <label for="name" class="login-label">Password</label>
+        <input type="password" class="login-input" id="password-input">
+        <button type="button" class="login-btn" id="sign-in">Sign in</button>
+        <button type="button" class="login-btn" id="sign-up">Sign up</button>
+        <img src="arrow.png" id="arrow">
+        <p id="change-link">Sign in?</p>
+      </form>
+    </div>
+    <div id="container"></div>
+    <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase.js"></script>
+    <script defer type="text/javascript" src="app.js"></script>
+  </body>
+</html>
